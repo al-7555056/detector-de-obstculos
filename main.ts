@@ -1,7 +1,7 @@
 let strip = neopixel.create(DigitalPin.P15, 24, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Green))
 basic.forever(function () {
-    if (maqueen.Ultrasonic(PingUnit.Centimeters) < 4) {
+    if (maqueen.Ultrasonic(PingUnit.Centimeters) < 8) {
         maqueen.motorStop(maqueen.Motors.All)
         if (randint(0, 1) == 1) {
             strip.showColor(neopixel.colors(NeoPixelColors.Red))
